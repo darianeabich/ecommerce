@@ -1,6 +1,6 @@
 # Ecommerce
 
-Este é o 1º projeto desenvolvido na ✨ Mentoria Angular PRO 2.0 ✨
+Este é o 1º projeto desenvolvido na ✨ **Mentoria Angular PRO 2.0** ✨
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a> 
 
@@ -44,7 +44,7 @@ npx nx graph
 ```
 npx nx affected:<NOME_DA_TAREFA>
 ```
-> Exemplos
+> Exemplos:
 ```
 npx nx affected:test
 npx nx affected:graph

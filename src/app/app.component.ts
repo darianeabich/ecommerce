@@ -12,4 +12,9 @@ import { NxWelcomeComponent } from './nx-welcome.component';
 })
 export class AppComponent {
   title = 'ecommerce';
+
+  funcao() {
+    // eslint-disable-next-line no-console
+    console.log('teste');
+  }
 }

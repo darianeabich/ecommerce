@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 import { LayoutModule } from '@ecommerce/layout';
 import { ProductSearchComponent } from '@ecommerce/product-search';
@@ -11,6 +13,8 @@ import { NxWelcomeComponent } from './nx-welcome.component';
     RouterModule,
     LayoutModule,
     ProductSearchComponent,
+    MatButtonModule,
+    MatIconModule,
   ],
   selector: 'ecommerce-root',
   templateUrl: './app.component.html',

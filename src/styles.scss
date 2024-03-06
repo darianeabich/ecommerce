@@ -1,19 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
 
-html,
-body {
-  height: 100%;
-}
-body {
+* {
   margin: 0;
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  padding: 0;
 }
 
 html,
 body {
-  height: 100%;
+  height: 100vh;
 }
 body {
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
+  background-color: #f5eee6;
+  color: #0d0d0d;
+
+  box-sizing: border-box;
+  // overflow-x: hidden;
 }
+
+// colors
+// verde musgo #7c6a0a
+// verde claro #babd8d
+// bege #ffdac6
+// laranja médio #fa9500
+// laranja escuro #eb6424

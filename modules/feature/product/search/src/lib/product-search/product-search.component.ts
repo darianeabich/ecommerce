@@ -1,5 +1,4 @@
-import { AsyncPipe, CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
@@ -24,15 +23,12 @@ import {
     MatInputModule,
     MatAutocompleteModule,
     ReactiveFormsModule,
-    AsyncPipe,
-    HttpClientModule,
   ],
   templateUrl: './product-search.component.html',
   styleUrl: './product-search.component.scss',
-  providers: [ProductSearchService],
 })
 export class ProductSearchComponent implements OnInit {
-  control = new FormControl();
+  control = new FormControl('', { nonNullable: true });
   products$!: Observable<Product[]>;
 
   constructor(private productSearchService: ProductSearchService) {}
@@ -43,7 +39,7 @@ export class ProductSearchComponent implements OnInit {
       // operadores
       debounceTime(500),
       distinctUntilChanged(),
-      filter((text) => text.length > 1),
+      filter((text) => text.length > 0),
       // map((text) => 'TEXTO TRANSFORMADO '+text),
       switchMap((text) => this.productSearchService.searchByName(text))
     );

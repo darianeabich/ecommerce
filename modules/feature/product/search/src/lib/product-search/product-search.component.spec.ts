@@ -43,8 +43,7 @@ describe('ProductSearchComponent', () => {
     const input: HTMLInputElement =
       fixture.nativeElement.querySelector('input');
 
-    input.value = 'tv';
-    input.dispatchEvent(new Event('input'));
+    setInputValue(input, 'tv');
 
     expect(productSearchService.searchByName).not.toHaveBeenCalled();
 
@@ -58,13 +57,11 @@ describe('ProductSearchComponent', () => {
     const input: HTMLInputElement =
       fixture.nativeElement.querySelector('input');
 
-    input.value = 'tv';
-    input.dispatchEvent(new Event('input'));
+    setInputValue(input, 'tv');
 
     tick(500);
 
-    input.value = 'notebook';
-    input.dispatchEvent(new Event('input'));
+    setInputValue(input, 'notebook');
 
     tick(500);
 
@@ -76,13 +73,11 @@ describe('ProductSearchComponent', () => {
     const input: HTMLInputElement =
       fixture.nativeElement.querySelector('input');
 
-    input.value = 'tv';
-    input.dispatchEvent(new Event('input'));
+    setInputValue(input, 'tv');
 
     tick(500);
 
-    input.value = 'tv';
-    input.dispatchEvent(new Event('input'));
+    setInputValue(input, 'tv');
 
     tick(500);
 
@@ -94,8 +89,7 @@ describe('ProductSearchComponent', () => {
     const input: HTMLInputElement =
       fixture.nativeElement.querySelector('input');
 
-    input.value = '';
-    input.dispatchEvent(new Event('input'));
+    setInputValue(input, '');
 
     tick(500);
 
@@ -108,3 +102,13 @@ describe('ProductSearchComponent', () => {
     });
   });
 });
+
+/**
+ * Atribuir valores ao componente a ser testado
+ * @param { HTMLInputElement } component
+ * @param { string } typedValue
+ */
+export function setInputValue(component: HTMLInputElement, typedValue: string) {
+  component.value = typedValue;
+  component.dispatchEvent(new Event('input'));
+}

@@ -19,6 +19,27 @@ body {
   // overflow-x: hidden;
 }
 
+// :host ::ng-deep .mat-primary {
+//   --mat-full-pseudo-checkbox-selected-icon-color: #7c6a0a;
+//   --mat-minimal-pseudo-checkbox-selected-checkmark-color: #7c6a0a;
+// }
+
+:host ::ng-deep .mat-focused {
+  color: #7c6a0a;
+}
+
+:host
+  ::ng-deep
+  .mat-mdc-form-field
+  .mat-mdc-form-field-type-mat-input
+  .mat-mdc-form-field-appearance-fill
+  .mat-primary
+  .mat-mdc-form-field-label-always-float
+  .mat-focused {
+  color: #7c6a0a;
+  border-color: #7c6a0a;
+}
+
 // colors
 // verde musgo #7c6a0a
 // verde claro #babd8d

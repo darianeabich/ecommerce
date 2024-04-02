@@ -1,0 +1,29 @@
+.example-form {
+  min-width: 300px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+  input {
+    height: min-content;
+  }
+}
+
+:host ::ng-deep .mdc-line-ripple {
+  color: #7c6a0a;
+}
+
+:host ::ng-deep .mat-mdc-form-field .mat-mdc-floating-label.mdc-floating-label {
+  color: #7c6a0a;
+}
+
+:host
+  ::ng-deep
+  .mat-mdc-text-field-wrapper
+  .mdc-text-field
+  .mdc-text-field--filled
+  .mdc-text-field--focused {
+  color: #7c6a0a;
+}

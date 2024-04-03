@@ -6,12 +6,13 @@
   padding: 20px;
   background-color: #babd8d;
 
-  h1 {
-    font-weight: 500;
+  &__logo {
+    text-decoration: none;
   }
-}
 
-.logo {
-  color: #fff;
-  margin: 0;
+  &__title {
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+  }
 }

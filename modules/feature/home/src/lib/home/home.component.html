@@ -1,1 +1,13 @@
-<p>home works!</p>
+<main class="home">
+  <section>
+    <h2>Produtos recomendados para você</h2>
+
+    <div class="product-card-container">
+      @for (product of products$ | async; track product.id) {
+      <ecommerce-product-card [product]="product"></ecommerce-product-card>
+      } @empty {
+      <strong>Não temos produtos recomendados para você por enquanto.</strong>
+      }
+    </div>
+  </section>
+</main>

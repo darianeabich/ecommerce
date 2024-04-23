@@ -11,18 +11,13 @@ body {
 }
 body {
   margin: 0;
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
-  background-color: #f5eee6;
-  color: #0d0d0d;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffdfa;
+  color: #3a3939;
 
   box-sizing: border-box;
   // overflow-x: hidden;
 }
-
-// :host ::ng-deep .mat-primary {
-//   --mat-full-pseudo-checkbox-selected-icon-color: #7c6a0a;
-//   --mat-minimal-pseudo-checkbox-selected-checkmark-color: #7c6a0a;
-// }
 
 :host ::ng-deep .mat-focused {
   color: #7c6a0a;

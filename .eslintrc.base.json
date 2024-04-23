@@ -6,7 +6,7 @@
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "rules": {
-        "no-console": ["error"],
+        "no-console": "off",
         "@nx/enforce-module-boundaries": [
           "error",
           {

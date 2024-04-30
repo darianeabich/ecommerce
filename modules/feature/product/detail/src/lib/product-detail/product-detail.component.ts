@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ProductSearchService } from '@ecommerce/product-data-access';
+import { switchMap } from 'rxjs';
 import { getParamsId } from './get-params';
 
 @Component({
@@ -11,6 +13,9 @@ import { getParamsId } from './get-params';
 })
 export class ProductDetailComponent {
   // @Input() id!: string;
+  productSearchService = inject(ProductSearchService);
 
-  id$ = getParamsId();
+  products$ = getParamsId().pipe(
+    switchMap((id) => this.productSearchService.getById(id))
+  );
 }

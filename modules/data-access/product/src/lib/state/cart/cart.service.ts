@@ -27,4 +27,8 @@ export class CartService {
   addToCart(product: Product): void {
     this.cartSignal.update((products) => [...products, product]);
   }
+
+  getProducts(): Product[] {
+    return this.cart();
+  }
 }

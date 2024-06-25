@@ -1,1 +1,11 @@
-<p>cart-detail works!</p>
+<!-- TODO: Estilizar o componente de detalhes do carrinho de compras. -->
+
+<main class="product-detail">
+  <section class="product-detail__section">
+    <ng-container *ngIf="product$ as products">
+      <div *ngFor="let product of products">
+        <ecommerce-product-card [product]="product"></ecommerce-product-card>
+      </div>
+    </ng-container>
+  </section>
+</main>

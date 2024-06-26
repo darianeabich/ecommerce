@@ -12,6 +12,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: master
       - uses: nrwl/nx-set-shas@v3
       - run: npm ci
 

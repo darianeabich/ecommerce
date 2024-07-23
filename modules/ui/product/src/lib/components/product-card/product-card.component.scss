@@ -1,6 +1,7 @@
 // estilização do card
 .product-card {
   max-width: 400px;
+  background-color: var(--color-primary-container);
 
   &__title {
     font-size: 16px;
@@ -8,7 +9,7 @@
 
   &__price {
     font-size: 18px;
-    color: #7c6a0a;
+    color: var(--color-on-primary-container);
   }
 }
 

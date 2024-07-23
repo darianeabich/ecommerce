@@ -4,7 +4,7 @@
   justify-content: space-between;
   height: 60px;
   padding: 20px;
-  background-color: #babd8d;
+  background-color: var(--color-primary);
 
   &__logo {
     text-decoration: none;
@@ -12,7 +12,7 @@
 
   &__title {
     font-weight: 500;
-    color: #fff;
+    color: var(--color-on-primary);
     margin: 0;
   }
 }

@@ -7,8 +7,8 @@ import {
   withComponentInputBinding,
   withPreloading,
 } from '@angular/router';
+import { httpErrorsInterceptor } from '@ecommerce/shared-services';
 import { appRoutes } from './app.routes';
-import { httpErrorsInterceptor } from './interceptors/http-errors/http-errors.interceptor';
 
 export const appConfig: ApplicationConfig = {
   providers: [

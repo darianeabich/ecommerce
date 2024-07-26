@@ -14,13 +14,13 @@
 
   <ng-container matColumnDef="email">
     <th mat-header-cell *matHeaderCellDef>Email</th>
-    <td mat-cell *matCellDef="let user">{{ user.email }}</td>
+    <td mat-cell *matCellDef="let user">{{ user.email | lowercase }}</td>
   </ng-container>
 
   <ng-container matColumnDef="biography">
     <th mat-header-cell *matHeaderCellDef>Biografia</th>
     <td mat-cell *matCellDef="let user">
-      <button mat-button color="primary" (click)="openBiography(user)">
+      <button mat-button class="biography-btn" (click)="openBiography(user)">
         Ler biografia
       </button>
     </td>

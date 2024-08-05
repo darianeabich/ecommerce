@@ -35,7 +35,8 @@
         "libs/modules/feature/product/search/src/index.ts"
       ],
       "@ecommerce/product-ui": ["libs/modules/ui/product/src/index.ts"],
-      "@ecommerce/shared-services": ["libs/shared/src/index.ts"],
+      "@ecommerce/shared-services": ["libs/shared/services/src/index.ts"],
+      "@ecommerce/shared-styles": ["libs/shared/styles/src/index.ts"],
       "@ecommerce/user": ["libs/modules/ui/user/src/index.ts"],
       "@ecommerce/user-data-access": [
         "libs/modules/data-access/user/src/index.ts"

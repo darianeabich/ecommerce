@@ -1,0 +1,72 @@
+@import 'theme';
+
+:host ::ng-deep .mat-focused {
+  color: var(--color-primary);
+}
+
+:host
+  ::ng-deep
+  .mat-mdc-form-field
+  .mat-mdc-form-field-type-mat-input
+  .mat-mdc-form-field-appearance-fill
+  .mat-primary
+  .mat-mdc-form-field-label-always-float
+  .mat-focused {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.mat-mdc-raised-button.mat-primary {
+  background-color: var(--color-primary) !important;
+  color: var(--color-on-primary) !important;
+}
+
+.mat-mdc-raised-button.mat-secondary {
+  background-color: var(--color-secondary) !important;
+  color: var(--color-on-secondary) !important;
+}
+
+.mat-mdc-raised-button.mat-tertiary {
+  background-color: var(--color-tertiary) !important;
+  color: var(--color-on-tertiary) !important;
+}
+
+.mat-raised-button {
+  background-color: var(--color-primary);
+  color: var(--color-primary);
+
+  &:hover {
+    background-color: var(--color-primary);
+  }
+}
+
+.mat-accent {
+  background-color: var(--color-secondary);
+  color: var(--color-secondary);
+
+  &:hover {
+    background-color: var(--color-secondary);
+  }
+}
+
+// Customizar o `mat-autocomplete`
+.mat-autocomplete-panel {
+  background-color: var(--color-primary); // Cor de fundo do painel
+  color: var(--color-primary); // Cor do texto
+
+  .mat-option {
+    &:hover {
+      background-color: var(--color-primary); // Cor de fundo ao passar o mouse
+    }
+  }
+
+  .mat-option.mat-selected {
+    background-color: var(--color-primary); // Cor de fundo ao selecionar
+    color: var(--color-primary); // Cor do texto ao selecionar
+  }
+
+  .mat-option.mat-active {
+    background-color: var(--color-primary); // Cor de fundo quando ativo
+    color: var(--color-primary); // Cor do texto quando ativo
+  }
+}

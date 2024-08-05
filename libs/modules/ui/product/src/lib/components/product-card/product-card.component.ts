@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
-import { Product } from 'modules/data-access/product/src/lib/models/product.model';
+import { Product } from '@ecommerce/product-data-access';
 
 @Component({
   selector: 'ecommerce-product-card',

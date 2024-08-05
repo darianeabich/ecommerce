@@ -1,3 +1,11 @@
-.mat-icon {
-  color: var(--color-on-primary);
+.mat-mdc-icon-button {
+  color: var(--color-tertiary);
+}
+
+.mat-mdc-icon-button:hover {
+  color: var(--color-on-tertiary);
+}
+
+.mat-badge-content .mat-badge-active {
+  background-color: var(--color-error);
 }

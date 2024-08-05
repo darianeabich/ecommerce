@@ -20,7 +20,12 @@
   <ng-container matColumnDef="biography">
     <th mat-header-cell *matHeaderCellDef>Biografia</th>
     <td mat-cell *matCellDef="let user">
-      <button mat-button class="biography-btn" (click)="openBiography(user)">
+      <button
+        mat-button
+        class="biography-btn"
+        (click)="openBiography(user)"
+        attr.aria-label="Ler a biografia de {{ user.name }}"
+      >
         Ler biografia
       </button>
     </td>

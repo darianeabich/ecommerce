@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { LayoutModule } from './../../../../libs/modules/feature/layout/src/lib/layout.module';
+import { LayoutModule } from '@ecommerce/layout';
 import { NxWelcomeComponent } from './nx-welcome.component';
 
 @Component({

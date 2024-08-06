@@ -1,6 +1,9 @@
 # Ecommerce
 
-Este é o 1º projeto desenvolvido na ✨ **Mentoria Angular PRO 2.0** ✨
+Este é o projeto desenvolvido na ✨ **Mentoria Angular PRO 2.0** ✨
+Consiste em um monorepositório contendo duas aplicações:
+- Página de produtos -> ecommerce
+- Página administrativa -> ecommerce-admin
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
@@ -16,14 +19,14 @@ npm install
 
 ## Servir o projeto localmente
 
+O seguinte comando fará carregar o projeto dos produtos (ecommerce):
 ```
 npm start
 ```
 
-ou
-
+Ou é possível escolher qual projeto você quer servir indicando o nome do projeto:
 ```
-npx nx serve
+npx nx serve <NOME_DO_PROJETO>
 ```
 
 O projeto será servido por padrão em [http://localhost:4200](http://localhost:4200).

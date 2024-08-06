@@ -9,12 +9,13 @@ import {
 } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { User, UserListService } from '@ecommerce/user-data-access';
+import { UserListDialogComponent } from '@ecommerce/user-ui';
 import { Subscription } from 'rxjs';
-import { UserListDialogComponent } from './user-list-dialog/user-list-dialog.component';
 
 @Component({
   selector: 'ecommerce-user-list',
@@ -26,6 +27,7 @@ import { UserListDialogComponent } from './user-list-dialog/user-list-dialog.com
     MatDialogModule,
     MatSortModule,
     MatPaginatorModule,
+    MatIconModule,
   ],
   templateUrl: './user-list.component.html',
   styleUrl: './user-list.component.scss',
@@ -66,4 +68,6 @@ export class UserListComponent implements OnInit, AfterViewInit, OnDestroy {
     });
     console.log(user.biography);
   }
+
+  openRegister() {}
 }

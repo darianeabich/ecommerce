@@ -1,3 +1,12 @@
+.user-list {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+}
+
 .avatar-user {
   width: 32px;
   border-radius: 50%;

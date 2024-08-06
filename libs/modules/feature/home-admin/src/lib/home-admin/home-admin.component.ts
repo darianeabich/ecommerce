@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { UserListComponent } from '@ecommerce/user';
+import { UserListComponent } from '@ecommerce/user-list';
 
 @Component({
   selector: 'ecommerce-home-admin',

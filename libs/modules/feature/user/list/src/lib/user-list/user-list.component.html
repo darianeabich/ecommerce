@@ -1,4 +1,11 @@
-<h2>User List</h2>
+<div class="user-list__header">
+  <h2>Usuários</h2>
+
+  <button mat-raised-button color="primary" (click)="openRegister()">
+    <mat-icon>add</mat-icon>
+    Adicionar
+  </button>
+</div>
 <table mat-table [dataSource]="userList" matSort>
   <ng-container matColumnDef="avatar">
     <th mat-header-cell *matHeaderCellDef>Avatar</th>

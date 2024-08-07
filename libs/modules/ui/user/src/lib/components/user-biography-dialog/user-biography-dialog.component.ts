@@ -12,7 +12,7 @@ import {
 import { User } from '@ecommerce/user-data-access';
 
 @Component({
-  selector: 'ecommerce-user-list-dialog',
+  selector: 'ecommerce-user-biography-dialog',
   standalone: true,
   imports: [
     CommonModule,
@@ -22,11 +22,11 @@ import { User } from '@ecommerce/user-data-access';
     MatDialogClose,
     MatButtonModule,
   ],
-  templateUrl: './user-list-dialog.component.html',
-  styleUrl: './user-list-dialog.component.scss',
+  templateUrl: './user-biography-dialog.component.html',
+  styleUrl: './user-biography-dialog.component.scss',
 })
-export class UserListDialogComponent {
-  readonly dialogRef = inject(MatDialogRef<UserListDialogComponent>);
+export class UserBiographyDialogComponent {
+  readonly dialogRef = inject(MatDialogRef<UserBiographyDialogComponent>);
   readonly data = inject<User>(MAT_DIALOG_DATA);
   readonly user = this.data;
 }

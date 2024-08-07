@@ -6,15 +6,19 @@ import {
 } from '@angular/material/dialog';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { User } from '@ecommerce/user-data-access';
-import { UserListDialogComponent } from './user-list-dialog.component';
+import { UserBiographyDialogComponent } from './user-biography-dialog.component';
 
-describe('UserListDialogComponent', () => {
-  let component: UserListDialogComponent;
-  let fixture: ComponentFixture<UserListDialogComponent>;
+describe('UserBiographyDialogComponent', () => {
+  let component: UserBiographyDialogComponent;
+  let fixture: ComponentFixture<UserBiographyDialogComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [UserListDialogComponent, MatDialogModule, NoopAnimationsModule],
+      imports: [
+        UserBiographyDialogComponent,
+        MatDialogModule,
+        NoopAnimationsModule,
+      ],
       providers: [
         {
           provide: MAT_DIALOG_DATA,
@@ -27,7 +31,7 @@ describe('UserListDialogComponent', () => {
       ],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(UserListDialogComponent);
+    fixture = TestBed.createComponent(UserBiographyDialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

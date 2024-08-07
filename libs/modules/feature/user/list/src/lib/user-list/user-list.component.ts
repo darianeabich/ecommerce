@@ -16,7 +16,7 @@ import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { User, UserListService } from '@ecommerce/user-data-access';
 import { UserFormComponent } from '@ecommerce/user-form';
-import { UserListDialogComponent } from '@ecommerce/user-ui';
+import { UserBiographyDialogComponent } from '@ecommerce/user-ui';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -70,7 +70,7 @@ export class UserListComponent implements OnInit, AfterViewInit, OnDestroy {
     }
   }
   openBiography(user: User) {
-    this.dialog.open(UserListDialogComponent, {
+    this.dialog.open(UserBiographyDialogComponent, {
       width: '500px',
       disableClose: true,
       data: user,

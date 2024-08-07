@@ -1,1 +1,1 @@
-export * from './lib/components/user-list-dialog/user-list-dialog.component';
+export * from './lib/components/user-biography-dialog/user-biography-dialog.component';

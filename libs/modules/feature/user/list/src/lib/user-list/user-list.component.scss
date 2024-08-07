@@ -60,6 +60,10 @@
   &__column1 {
     width: 5%;
     text-align: center;
+
+    &__link {
+      cursor: pointer;
+    }
   }
 
   &__column2 {

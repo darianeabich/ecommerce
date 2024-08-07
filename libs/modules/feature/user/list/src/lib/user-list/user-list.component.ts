@@ -16,7 +16,10 @@ import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { User, UserListService } from '@ecommerce/user-data-access';
 import { UserFormComponent } from '@ecommerce/user-form';
-import { UserBiographyDialogComponent } from '@ecommerce/user-ui';
+import {
+  UserAvatarDialogComponent,
+  UserBiographyDialogComponent,
+} from '@ecommerce/user-ui';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -83,6 +86,13 @@ export class UserListComponent implements OnInit, AfterViewInit, OnDestroy {
       width: '650px',
       disableClose: true,
       data: { user: user },
+    });
+  }
+
+  openAvatarDialog(user: User) {
+    this.dialog.open(UserAvatarDialogComponent, {
+      width: '400px',
+      data: user,
     });
   }
 }

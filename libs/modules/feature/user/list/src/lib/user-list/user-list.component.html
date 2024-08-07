@@ -17,7 +17,9 @@
       Avatar
     </th>
     <td mat-cell *matCellDef="let user" class="custom-table__column1">
-      <img src="{{ user.avatar }}" class="avatar-user" />
+      <a (click)="openAvatarDialog(user)" class="custom-table__column1__link">
+        <img src="{{ user.avatar }}" class="avatar-user" />
+      </a>
     </td>
   </ng-container>
 

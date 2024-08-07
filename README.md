@@ -1,13 +1,23 @@
 # Ecommerce
 
-Este é o projeto desenvolvido na ✨ **Mentoria Angular PRO 2.0** ✨
+Este é o projeto em **Angular** desenvolvido na ✨ **Mentoria Angular PRO 2.0** ✨
+
 Consiste em um monorepositório contendo duas aplicações:
-- Página de produtos -> ecommerce
-- Página administrativa -> ecommerce-admin
+- Plataforma de produtos -> ecommerce
+- Plataforma administrativa -> ecommerce-admin
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+``
+Angular: 17.0.0
+`` \
+``
+Angular Material: 17.2.1
+`` \
+``
+NX: 17.2.8
+``
 
-✨ **Esse workspace foi gerado pelo [Nx build system.](https://nx.dev)** ✨
+
+*Esse workspace foi gerado pelo [Nx build system.](https://nx.dev)*
 
 ## Baixar o projeto
 

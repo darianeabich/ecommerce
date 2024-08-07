@@ -1,7 +1,35 @@
 <h2 mat-dialog-title>Cadastrar usuário</h2>
 <mat-dialog-content>
   <form class="form" [formGroup]="form">
+    <div class="form__field" align="center">
+      <div class="avatar-container">
+        <div
+          class="image-container"
+          *ngIf="file; else placeholder"
+          [ngStyle]="{ backgroundImage: 'url(' + file + ')' }"
+        ></div>
+
+        <ng-template #placeholder>
+          <div class="image-container avatar-placeholder"></div>
+        </ng-template>
+
+        <label for="avatar-input-file">
+          <div class="icon-wrapper">
+            <input
+              type="file"
+              #fileInput
+              id="avatar-input-file"
+              accept="image/*"
+              (change)="onChangeFileInput($event)"
+              formControlName="avatar"
+            />
+            <mat-icon class="icon" fontIcon="edit"></mat-icon>
+          </div>
+        </label>
+      </div>
+    </div>
     <br />
+
     <p>
       <mat-form-field class="form__field">
         <mat-label>Nome completo</mat-label>
@@ -61,7 +89,7 @@
       </mat-form-field>
     </p>
 
-    <div class="file-input mt-2">
+    <!-- <div class="file-input mt-2">
       <input
         type="file"
         style="display: none"
@@ -86,7 +114,7 @@
       <ng-template #fileName>
         <p class="file-name">{{ file?.name }}</p>
       </ng-template>
-    </div>
+    </div> -->
   </form>
 </mat-dialog-content>
 <mat-dialog-actions align="end">

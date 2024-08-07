@@ -13,6 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { User, UserListService } from '@ecommerce/user-data-access';
 import { UserFormComponent } from '@ecommerce/user-form';
 import { UserListDialogComponent } from '@ecommerce/user-ui';
@@ -29,12 +30,19 @@ import { Subscription } from 'rxjs';
     MatSortModule,
     MatPaginatorModule,
     MatIconModule,
+    MatTooltipModule,
   ],
   templateUrl: './user-list.component.html',
   styleUrl: './user-list.component.scss',
 })
 export class UserListComponent implements OnInit, AfterViewInit, OnDestroy {
-  displayedColumns: string[] = ['avatar', 'name', 'email', 'biography'];
+  displayedColumns: string[] = [
+    'avatar',
+    'name',
+    'email',
+    'biography',
+    'actions',
+  ];
 
   userListService = inject(UserListService);
   userList = new MatTableDataSource<User>();
@@ -70,11 +78,11 @@ export class UserListComponent implements OnInit, AfterViewInit, OnDestroy {
     console.log(user.biography);
   }
 
-  openRegister() {
+  openRegister(user: User | null) {
     this.dialog.open(UserFormComponent, {
       width: '650px',
       disableClose: true,
-      data: { user: null },
+      data: { user: user },
     });
   }
 }

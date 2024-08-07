@@ -72,6 +72,14 @@ export class UserListComponent implements OnInit, AfterViewInit, OnDestroy {
       this.subscription.unsubscribe();
     }
   }
+
+  /**
+   * @description Abertura do dialog de biografia do usuário selecionado
+   * @author Dariane Abich
+   * @date 07/08/2024
+   * @param {User} user
+   * @memberof UserListComponent
+   */
   openBiography(user: User) {
     this.dialog.open(UserBiographyDialogComponent, {
       width: '500px',
@@ -81,6 +89,13 @@ export class UserListComponent implements OnInit, AfterViewInit, OnDestroy {
     console.log(user.biography);
   }
 
+  /**
+   * @description Abertura do dialog de registro ou edição do usuário
+   * @author Dariane Abich
+   * @date 07/08/2024
+   * @param {(User | null)} user
+   * @memberof UserListComponent
+   */
   openRegister(user: User | null) {
     this.dialog.open(UserFormComponent, {
       width: '650px',
@@ -89,6 +104,13 @@ export class UserListComponent implements OnInit, AfterViewInit, OnDestroy {
     });
   }
 
+  /**
+   * @description Abertura do dialog de imagem de perfil do usuário
+   * @author Dariane Abich
+   * @date 07/08/2024
+   * @param {User} user
+   * @memberof UserListComponent
+   */
   openAvatarDialog(user: User) {
     this.dialog.open(UserAvatarDialogComponent, {
       width: '400px',

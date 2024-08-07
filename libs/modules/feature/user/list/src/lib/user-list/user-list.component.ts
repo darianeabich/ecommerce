@@ -14,6 +14,7 @@ import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { User, UserListService } from '@ecommerce/user-data-access';
+import { UserFormComponent } from '@ecommerce/user-form';
 import { UserListDialogComponent } from '@ecommerce/user-ui';
 import { Subscription } from 'rxjs';
 
@@ -69,5 +70,11 @@ export class UserListComponent implements OnInit, AfterViewInit, OnDestroy {
     console.log(user.biography);
   }
 
-  openRegister() {}
+  openRegister() {
+    this.dialog.open(UserFormComponent, {
+      width: '650px',
+      disableClose: true,
+      data: { user: null },
+    });
+  }
 }

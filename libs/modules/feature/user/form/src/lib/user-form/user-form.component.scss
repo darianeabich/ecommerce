@@ -1,0 +1,47 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &__field {
+    width: 100%;
+  }
+}
+
+/* Customizar os inputs */
+:host ::ng-deep .mat-mdc-text-field-wrapper > input {
+  height: 36px; /* ajuste conforme necessário */
+}
+
+:host ::ng-deep .mat-input-element {
+  padding: 0.25rem 0.75rem; /* ajuste conforme necessário */
+}
+
+:host ::ng-deep .mdc-text-field--outlined .mat-mdc-form-field-infix,
+.mdc-text-field--no-label .mat-mdc-form-field-infix {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  min-height: 36px;
+}
+
+:host ::ng-deep .mdc-text-field {
+  padding: 0 8px !important;
+  // padding-bottom: 8px !important;
+}
+
+:host
+  ::ng-deep
+  .mat-mdc-text-field-wrapper
+  .mat-mdc-form-field-flex
+  .mat-mdc-floating-label {
+  top: calc(36px / 2);
+}
+
+textarea {
+  min-height: 130px;
+}
+
+.hint-text {
+  margin-bottom: 4px !important;
+  color: var(--color-error);
+}

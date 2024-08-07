@@ -37,11 +37,12 @@
       "@ecommerce/product-ui": ["libs/modules/ui/product/src/index.ts"],
       "@ecommerce/shared-services": ["libs/shared/services/src/index.ts"],
       "@ecommerce/shared-styles": ["libs/shared/styles/src/index.ts"],
-      "@ecommerce/user-ui": ["libs/modules/ui/user/src/index.ts"],
       "@ecommerce/user-data-access": [
         "libs/modules/data-access/user/src/index.ts"
       ],
-      "@ecommerce/user-list": ["libs/modules/feature/user/list/src/index.ts"]
+      "@ecommerce/user-form": ["libs/modules/feature/user/form/src/index.ts"],
+      "@ecommerce/user-list": ["libs/modules/feature/user/list/src/index.ts"],
+      "@ecommerce/user-ui": ["libs/modules/ui/user/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

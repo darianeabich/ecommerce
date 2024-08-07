@@ -1,0 +1,102 @@
+<h2 mat-dialog-title>Cadastrar usuário</h2>
+<mat-dialog-content>
+  <form class="form" [formGroup]="form">
+    <br />
+    <p>
+      <mat-form-field class="form__field">
+        <mat-label>Nome completo</mat-label>
+        <input
+          matInput
+          autofocus
+          formControlName="name"
+          placeholder="Ex: Fulano de Tal"
+        />
+        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+        @if (form.get('name')?.touched &&
+        form.get('name')?.hasError('required')) {
+        <mat-error data-testid="name-required">O nome é obrigatório</mat-error>
+        }
+      </mat-form-field>
+    </p>
+    <p class="mt-1">
+      <mat-form-field class="form__field">
+        <mat-label>E-mail</mat-label>
+        <input
+          matInput
+          formControlName="email"
+          placeholder="Ex: fulanodetal@gmail.com"
+          type="email"
+        />
+        @if (form.get('email')?.hasError('email') &&
+        !form.get('email')?.hasError('required') && form.get('email')?.touched)
+        {
+        <mat-error data-testid="email-invalid">E-mail inválido</mat-error>
+        } @if (form.get('email')?.hasError('required')) {
+        <mat-error data-testid="email-required"
+          >O e-mail é obrigatório</mat-error
+        >
+        }
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="form__field">
+        <mat-label>Biografia</mat-label>
+        <textarea
+          matInput
+          formControlName="biography"
+          maxlength="500"
+        ></textarea>
+        <mat-hint align="end">
+          {{ form.get('biography')?.value?.length }}/500</mat-hint
+        >
+        @if (form.get('biography')?.touched &&
+        form.get('biography')?.hasError('required')) {
+        <mat-error>A biografia é obrigatória</mat-error>
+        } @if (form.get('biography')?.hasError('minlength') &&
+        form.get('biography')?.touched) {
+        <mat-error>A biografia deve ter pelo menos 10 caracteres</mat-error>
+        } @if (form.get('biography')?.hasError('maxlength')) {
+        <mat-error>A biografia deve ter no maximo 500 caracteres</mat-error>
+        }
+      </mat-form-field>
+    </p>
+
+    <div class="file-input mt-2">
+      <input
+        type="file"
+        style="display: none"
+        #fileInput
+        accept="image/*"
+        (change)="onChangeFileInput()"
+        formControlName="avatar"
+      />
+      <button
+        mat-raised-button
+        color="primary"
+        class="file-select-button"
+        (click)="onClickFileInputButton()"
+      >
+        <mat-icon>attach_file</mat-icon>
+        Selecionar
+      </button>
+
+      <p class="file-name" *ngIf="!file; else fileName">
+        Selecione uma imagem para seu avatar.
+      </p>
+      <ng-template #fileName>
+        <p class="file-name">{{ file?.name }}</p>
+      </ng-template>
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button
+    mat-raised-button
+    id="saveBtn"
+    color="primary"
+    [disabled]="form.invalid"
+  >
+    Salvar
+  </button>
+  <button mat-button mat-dialog-close>Fechar</button>
+</mat-dialog-actions>

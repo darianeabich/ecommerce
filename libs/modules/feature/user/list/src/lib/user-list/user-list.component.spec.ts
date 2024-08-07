@@ -33,11 +33,39 @@ describe('UserListComponent', () => {
     expect(userList.length).toBe(mockUsers.length);
   });
 
-  it('should render aria-label with user name', () => {
+  it('should render biography button aria-label with user name', () => {
     const button: HTMLButtonElement =
       fixture.debugElement.nativeElement.querySelector('#biographyBtn');
     expect(button.getAttribute('aria-label')).toBe(
       'Ler a biografia de Lila Kuhic'
     );
+  });
+
+  it('should render avatar link aria-label with user name', () => {
+    const compiled = fixture.debugElement.nativeElement;
+    const link: HTMLAnchorElement = compiled.querySelector('#avatarLink');
+    expect(link.getAttribute('aria-label')).toBe('Ver avatar de Lila Kuhic');
+  });
+
+  it('should render tooltip view link correctly', () => {
+    const compiled = fixture.debugElement.nativeElement;
+    const actions: HTMLSpanElement = compiled.querySelector('#avatarLink');
+
+    expect(actions.getAttribute('matTooltip')).toBe('Visualizar');
+  });
+
+  it('should render tooltip edit button correctly', () => {
+    const compiled = fixture.debugElement.nativeElement;
+    const actions: HTMLButtonElement = compiled.querySelector('#editUserBtn');
+
+    expect(actions.getAttribute('matTooltip')).toBe('Editar');
+  });
+
+  it('should render tooltip disabled button correctly', () => {
+    const compiled = fixture.debugElement.nativeElement;
+    const actions: HTMLButtonElement =
+      compiled.querySelector('#disableUserBtn');
+
+    expect(actions.getAttribute('matTooltip')).toBe('Desabilitar');
   });
 });

@@ -17,7 +17,13 @@
       Avatar
     </th>
     <td mat-cell *matCellDef="let user" class="custom-table__column1">
-      <a (click)="openAvatarDialog(user)" class="custom-table__column1__link">
+      <a
+        id="avatarLink"
+        (click)="openAvatarDialog(user)"
+        class="custom-table__column1__link"
+        attr.aria-label="Ver avatar de {{ user.name }}"
+        matTooltip="Visualizar"
+      >
         <img src="{{ user.avatar }}" class="avatar-user" />
       </a>
     </td>
